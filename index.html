@@ -6,15 +6,22 @@
     <meta name="description" content="Luxury Burgers - Experience opulence in every byte with our exclusive NFT collection.">
     <meta name="keywords" content="NFT, Luxury, Burgers, Digital Art, Blockchain, OpenSea">
     <meta name="author" content="Luxury Burgers Team">
+    <meta property="og:title" content="Luxury Burgers">
+    <meta property="og:description" content="Experience opulence in every byte with our exclusive NFT collection.">
+    <meta property="og:image" content="https://motazalmaroai.github.io/luxury-burgers/logo.png">
+    <meta property="og:url" content="https://motazalmaroai.github.io/luxury-burgers/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
     <title>Luxury Burgers</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/ethers@5.4.0/dist/ethers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3modal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script src="scriptst.js" defer></script>
 </head>
 <body>
-
     <header>
-        <a href="#home"><img src="your-logo-url.jpg" alt="Luxury Burgers Logo" style="height: 50px;"></a>
+        <a href="#home"><img src="logo.png" alt="Luxury Burgers Logo" style="height: 50px;"></a>
         <span class="menu-toggle">&#9776;</span>
         <nav>
             <a href="#home">Home</a>
@@ -64,21 +71,52 @@
 
     <section class="section" id="roadmap">
         <h2>Our Journey</h2>
-        <p>
-            Follow our journey as we bring the Luxury Burgers collection to life. From concept development to community building and beyond, stay updated with our progress and future plans.
-        </p>
-        <h3>Q1 2024: Concept Development</h3>
-        <p>Idea generation and initial design sketches.</p>
-        <h3>Q2 2024: Community Building</h3>
-        <p>Launch social media channels and Telegram group.</p>
-        <h3>Q3 2024: NFT Creation</h3>
-        <p>Design and finalize the collection of 15 unique NFTs.</p>
-        <h3>Q4 2024: Pre-Launch Marketing</h3>
-        <p>Start pre-launch marketing campaigns and build anticipation.</p>
-        <h3>Q1 2025: Minting and Launch</h3>
-        <p>Mint the NFTs and launch the Luxury Burgers collection.</p>
-        <h3>Q2 2025 and Beyond: Future Plans</h3>
-        <p>Expand the collection, introduce new features, and continue community engagement.</p>
+        <div class="timeline">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>Q1 2024: Concept Development</h3>
+                    <p>Idea generation and initial design sketches.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>Q2 2024: Community Building</h3>
+                    <p>Launch social media channels and Telegram group.</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>Q3 2024: NFT Creation</h3>
+                    <p>Design and finalize the collection of 15 unique NFTs.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>Q4 2024: Pre-Launch Marketing</h3>
+                    <p>Start pre-launch marketing campaigns and build anticipation.</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>Q1 2025: Minting and Launch</h3>
+                    <p>Mint the NFTs and launch the Luxury Burgers collection.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>Q2 2025 and Beyond: Future Plans</h3>
+                    <p>Expand the collection, introduce new features, and continue community engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="minting-progress">
+        <h2>Minting Progress</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p id="progress-text">Minting has not started yet.</p>
     </section>
 
     <section class="cta-section" id="contact">
@@ -102,29 +140,5 @@
             <a href="https://t.me">Telegram</a>
         </div>
     </footer>
-
-    <script>
-        // Menu Toggle for Mobile View
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('header nav').classList.toggle('active');
-        });
-
-        // Wallet Connectivity
-        const connectWalletButton = document.getElementById('connectWallet');
-        
-        connectWalletButton.addEventListener('click', async () => {
-            if (typeof window.ethereum !== 'undefined') {
-                try {
-                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-                    connectWalletButton.textContent = 'Wallet Connected';
-                    console.log('Connected account:', accounts[0]);
-                } catch (error) {
-                    console.error('Error connecting to wallet:', error);
-                }
-            } else {
-                alert('Please install MetaMask!');
-            }
-        });
-    </script>
 </body>
 </html>
