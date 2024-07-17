@@ -6,139 +6,179 @@
     <meta name="description" content="Luxury Burgers - Experience opulence in every byte with our exclusive NFT collection.">
     <meta name="keywords" content="NFT, Luxury, Burgers, Digital Art, Blockchain, OpenSea">
     <meta name="author" content="Luxury Burgers Team">
-    <meta property="og:title" content="Luxury Burgers">
-    <meta property="og:description" content="Experience opulence in every byte with our exclusive NFT collection.">
-    <meta property="og:image" content="https://motazalmaroai.github.io/luxury-burgers/logo.png">
-    <meta property="og:url" content="https://motazalmaroai.github.io/luxury-burgers/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
     <title>Luxury Burgers</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/web3modal"></script>
     <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider"></script>
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
-    <script src="scriptst.js" defer></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <header>
-        <a href="#home"><img src="logo.png" alt="Luxury Burgers Logo" style="height: 50px;"></a>
-        <span class="menu-toggle">&#9776;</span>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#collection">Collection</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#contact">Contact</a>
-            <span class="connect-wallet" id="connectWallet">Connect Wallet</span>
-        </nav>
-    </header>
-
-    <div class="hero" id="home">
-        <h1>Experience Opulence in Every Byte</h1>
-        <p>Welcome to Luxury Burgers, where culinary artistry meets digital opulence.</p>
-        <a href="#collection" class="cta-button">Explore Collection</a>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="background_video.mp4" type="video/mp4">
+        </video>
     </div>
-
-    <section class="section" id="about">
-        <h2>The Concept Behind Luxury Burgers</h2>
-        <p>
-            Luxury Burgers was born from a vision of blending culinary creativity with the digital art world. Inspired by the allure of precious materials and the artistry of gourmet cuisine, we set out to create a collection that redefines opulence in the NFT space. Each burger in our collection is meticulously designed to showcase the elegance and extravagance of gold, diamonds, and other rare gemstones, making them not just digital assets, but symbols of wealth and luxury.
-        </p>
-        <h2>Our Vision and Mission</h2>
-        <p>
-            Our vision is to transform everyday objects into extraordinary works of digital art, elevating them to new heights of luxury and exclusivity. Through the Luxury Burgers collection, we aim to create a sense of wonder and admiration, offering collectors a unique blend of digital craftsmanship and opulence. Our mission is to continuously innovate and push the boundaries of what’s possible in the NFT space, delivering unparalleled value and experience to our community.
-        </p>
-    </section>
-
-    <section class="section" id="collection">
-        <h2>Our Collection</h2>
-        <div class="grid">
-            <div class="item">
-                <img src="your-image-url.jpg" alt="Diamond Deluxe Burger">
-                <h3>Diamond Deluxe Burger</h3>
-                <p>An opulent masterpiece with gold buns and diamond toppings.</p>
-                <a href="https://opensea.io/collection/your-collection-link" target="_blank">View on OpenSea</a>
+    <div class="content">
+        <header>
+            <div class="container">
+                <a href="#home" class="logo"><img src="logo.png" alt="Luxury Burgers Logo"></a>
+                <span class="menu-toggle">&#9776;</span>
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#collection">Collection</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="#contact">Contact</a>
+                    <span class="connect-wallet" id="connectWallet">Connect Wallet</span>
+                </nav>
             </div>
-            <div class="item">
-                <img src="your-image-url.jpg" alt="Golden Gourmet Burger">
-                <h3>Golden Gourmet Burger</h3>
-                <p>A lavish creation with gold leaf and platinum patty.</p>
-                <a href="https://opensea.io/collection/your-collection-link" target="_blank">View on OpenSea</a>
-            </div>
-            <!-- Add more items as needed -->
-        </div>
-    </section>
+        </header>
 
-    <section class="section" id="roadmap">
-        <h2>Our Journey</h2>
-        <div class="timeline">
-            <div class="timeline-container left">
-                <div class="timeline-content">
-                    <h3>Q1 2024: Concept Development</h3>
-                    <p>Idea generation and initial design sketches.</p>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Experience Opulence in Every Byte</h1>
+                <p>Welcome to Luxury Burgers, where culinary artistry meets digital opulence.</p>
+                <a href="#collection" class="cta-button">Explore Collection</a>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <h2>The Concept Behind Luxury Burgers</h2>
+                <p>Luxury Burgers was born from a vision of blending culinary creativity with the digital art world. Inspired by the allure of precious materials and the artistry of gourmet cuisine, we set out to create a collection that redefines opulence in the NFT space. Each burger in our collection is meticulously designed to showcase the elegance and extravagance of gold, diamonds, and other rare gemstones, making them not just digital assets, but symbols of wealth and luxury.</p>
+                <h2>Our Vision and Mission</h2>
+                <p>Our vision is to transform everyday objects into extraordinary works of digital art, elevating them to new heights of luxury and exclusivity. Through the Luxury Burgers collection, we aim to create a sense of wonder and admiration, offering collectors a unique blend of digital craftsmanship and opulence. Our mission is to continuously innovate and push the boundaries of what’s possible in the NFT space, delivering unparalleled value and experience to our community.</p>
+            </div>
+        </section>
+
+        <section class="section" id="collection">
+            <div class="container">
+                <h2>Our Collection</h2>
+
+                <h3>Mint Collection</h3>
+                <div class="grid">
+                    <div class="item">
+                        <img src="Titanium_Triumph_Burger.jpg" alt="Titanium Triumph Burger">
+                        <h3>Titanium Triumph Burger</h3>
+                        <p>Buns made of titanium with platinum patty, gold cheese, and rubellite ketchup.</p>
+                        <a href="#" class="cta-link">Mint Coming Soon</a>
+                    </div>
+                    <div class="item">
+                        <img src="Quartz_Quintessence_Burger.jpg" alt="Quartz Quintessence Burger">
+                        <h3>Quartz Quintessence Burger</h3>
+                        <p>Clear quartz buns with platinum patty, gold cheese, and diamond ketchup.</p>
+                        <a href="#" class="cta-link">Mint Coming Soon</a>
+                    </div>
+                    <div class="item">
+                        <img src="Lapis_Luxury_Burger.jpg" alt="Lapis Luxury Burger">
+                        <h3>Lapis Luxury Burger</h3>
+                        <p>Lapis lazuli buns with platinum patty, gold cheese, and alexandrite ketchup.</p>
+                        <a href="#" class="cta-link">Mint Coming Soon</a>
+                    </div>
+                    <div class="item">
+                        <img src="Onyx_Opulence_Burger.jpg" alt="Onyx Opulence Burger">
+                        <h3>Onyx Opulence Burger</h3>
+                        <p>Onyx buns with platinum patty, gold cheese, and sapphire ketchup.</p>
+                        <a href="#" class="cta-link">Mint Coming Soon</a>
+                    </div>
+                    <div class="item">
+                        <img src="Zircon_Zenith_Burger.jpg" alt="Zircon Zenith Burger">
+                        <h3>Zircon Zenith Burger</h3>
+                        <p>Zircon buns with platinum patty, gold cheese, and topaz ketchup.</p>
+                        <a href="#" class="cta-link">Mint Coming Soon</a>
+                    </div>
+                    <div class="item">
+                        <img src="Amethyst_Aura_Burger.jpg" alt="Amethyst Aura Burger">
+                        <h3>Amethyst Aura Burger</h3>
+                        <p>Amethyst buns with platinum patty, gold cheese, and garnet ketchup.</p>
+                        <a href="#" class="cta-link">Mint Coming Soon</a>
+                    </div>
+                </div>
+
+                <h3>Main Collection</h3>
+                <div class="main-collection-placeholder">
+                    <p>We are still working on our Main Collection. Stay tuned for the exclusive and luxurious reveal coming soon!</p>
                 </div>
             </div>
-            <div class="timeline-container right">
-                <div class="timeline-content">
-                    <h3>Q2 2024: Community Building</h3>
-                    <p>Launch social media channels and Telegram group.</p>
-                </div>
-            </div>
-            <div class="timeline-container left">
-                <div class="timeline-content">
-                    <h3>Q3 2024: NFT Creation</h3>
-                    <p>Design and finalize the collection of 15 unique NFTs.</p>
-                </div>
-            </div>
-            <div class="timeline-container right">
-                <div class="timeline-content">
-                    <h3>Q4 2024: Pre-Launch Marketing</h3>
-                    <p>Start pre-launch marketing campaigns and build anticipation.</p>
-                </div>
-            </div>
-            <div class="timeline-container left">
-                <div class="timeline-content">
-                    <h3>Q1 2025: Minting and Launch</h3>
-                    <p>Mint the NFTs and launch the Luxury Burgers collection.</p>
-                </div>
-            </div>
-            <div class="timeline-container right">
-                <div class="timeline-content">
-                    <h3>Q2 2025 and Beyond: Future Plans</h3>
-                    <p>Expand the collection, introduce new features, and continue community engagement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section" id="minting-progress">
-        <h2>Minting Progress</h2>
-        <div class="progress-container">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-        <p id="progress-text">Minting has not started yet.</p>
-    </section>
+        <section class="section" id="roadmap">
+            <div class="container">
+                <h2>Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon" data-hover="Q3 2024"></div>
+                        <div class="timeline-content">
+                            <h3>Q3 2024: Concept Development</h3>
+                            <p>Finalize the concept and design of the initial 15 NFTs. Collaborate with top designers to create visually stunning and luxurious NFTs.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon" data-hover="Q4 2024"></div>
+                        <div class="timeline-content">
+                            <h3>Q4 2024: Community Building</h3>
+                            <p>Launch social media channels and start engaging with the community through regular updates, sneak peeks, and interactive posts. Initiate a referral program to incentivize community growth.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon" data-hover="Q1 2025"></div>
+                        <div class="timeline-content">
+                            <h3>Q1 2025: Pre-Launch and Initial Minting</h3>
+                            <p>Release the first 6 additional NFTs for minting. Conduct pre-launch marketing campaigns to build anticipation. Host virtual events and AMAs to connect with the community. Ensure all NFTs are ready for minting on the Polygon network.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon" data-hover="Q2 2025"></div>
+                        <div class="timeline-content">
+                            <h3>Q2 2025: Official Launch</h3>
+                            <p>Launch the Luxury Burgers NFT collection. Open minting for the remaining 15 NFTs. Collaborate with influencers and media for coverage and promotion.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon" data-hover="Q3 2025"></div>
+                        <div class="timeline-content">
+                            <h3>Q3 2025: Post-Launch and Expansion</h3>
+                            <p>Continue engaging with the community through regular updates and new releases. Introduce new features and enhancements to the website. Expand the collection with new and exclusive NFTs.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon" data-hover="Q4 2025"></div>
+                        <div class="timeline-content">
+                            <h3>Q4 2025 and Beyond: Future Plans</h3>
+                            <p>Explore partnerships with luxury brands for exclusive collaborations. Develop a marketplace for Luxury Burgers NFT holders. Continuously innovate and push the boundaries of the NFT space.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="cta-section" id="contact">
-        <h2>Get in Touch</h2>
-        <p>We’d love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.</p>
-        <a href="mailto:info@luxuryburgers.com">Email Us</a>
-        <div>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://t.me">Telegram</a>
-        </div>
-    </section>
+        <section class="cta-section" id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>We’d love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.</p>
+                <a href="mailto:info@luxuryburgers.com" class="cta-button">Email Us</a>
+                <div class="social-links">
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://t.me" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2024 Luxury Burgers. All rights reserved.</p>
-        <div>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://t.me">Telegram</a>
-        </div>
-    </footer>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Luxury Burgers. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://t.me" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

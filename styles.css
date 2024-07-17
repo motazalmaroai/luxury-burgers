@@ -4,12 +4,41 @@ body {
     color: #FFD700; /* Gold color for text */
     background-color: #000; /* Black background */
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3; /* Make the video slightly visible */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header, footer {
     background-color: #000;
     color: #FFD700;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -29,11 +58,28 @@ header .menu-toggle {
     cursor: pointer;
 }
 
+.logo img {
+    height: 50px;
+}
+
 .hero {
-    background: url('logo.png') no-repeat center center/cover;
+    background: url('background_image.png') no-repeat center center/cover;
     color: #FFD700;
     text-align: center;
     padding: 100px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add a slight overlay to enhance text readability */
+    z-index: -1;
 }
 
 .hero h1 {
@@ -81,7 +127,7 @@ header .menu-toggle {
 }
 
 .section {
-    padding: 50px 20px;
+    padding: 50px 0;
     text-align: center;
 }
 
@@ -128,6 +174,22 @@ header .menu-toggle {
     color: #666;
 }
 
+.main-collection-placeholder {
+    background-color: #222; /* Dark background */
+    border: 2px solid #FFD700; /* Gold border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.main-collection-placeholder p {
+    font-size: 18px;
+    color: #FFD700; /* Gold text */
+}
+
 .cta-section {
     background-color: #000;
     color: #FFD700;
@@ -135,7 +197,7 @@ header .menu-toggle {
     padding: 50px 20px;
 }
 
-.cta-section a {
+.cta-section .cta-button {
     color: #FFD700;
     text-decoration: none;
     margin: 0 10px;
@@ -143,128 +205,138 @@ header .menu-toggle {
     transition: color 0.3s ease;
 }
 
-.cta-section a:hover {
+.cta-section .cta-button:hover {
     color: #fff;
 }
 
-footer div a {
+.social-links a {
     display: inline-block;
     margin: 0 5px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-footer div a:hover {
+.social-links a:hover {
     color: #fff;
 }
 
 .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 50px 0;
 }
 
-.timeline::after {
+.timeline::before {
     content: '';
     position: absolute;
-    width: 6px;
-    background-color: #FFD700;
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    width: 4px;
+    background: #FFD700;
+    z-index: 0;
 }
 
-.timeline-container {
-    padding: 10px 40px;
+.timeline-item {
     position: relative;
-    background-color: inherit;
     width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
-.timeline-container::after {
-    content: '';
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-icon {
     position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #FFD700;
-    top: 15px;
+    top: 20px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background: #FFD700;
+    border: 4px solid #FFF;
     border-radius: 50%;
     z-index: 1;
+    cursor: pointer;
 }
 
-.left {
-    left: 0;
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -8px;
+    right: auto;
 }
 
-.right {
-    left: 50%;
-}
-
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
-.right::after {
-    left: -16px;
-}
-
-.left::after {
-    right: -16px;
-}
-
-.timeline-content {
-    padding: 20px 30px;
-    background-color: white;
+.timeline-item .timeline-content {
+    display: none;
     position: relative;
+    background: #222; /* Dark background for the content */
+    border: 1px solid #FFD700; /* Gold border */
     border-radius: 6px;
-    color: black;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    z-index: 1;
+    text-align: center;
+    color: #DDD;
+}
+
+.timeline-icon:hover + .timeline-content {
+    display: block;
+}
+
+.timeline-icon::after {
+    content: attr(data-hover);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFD700;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.timeline-icon:hover::after {
+    opacity: 1;
+}
+
+.timeline-content h3 {
+    color: #FFD700;
+}
+
+.timeline-content p {
+    color: #DDD;
 }
 
 @media (max-width: 768px) {
-    .timeline::after {
-        left: 31px;
+    .timeline::before {
+        left: 20px;
     }
 
-    .timeline-container {
+    .timeline-item {
         width: 100%;
-        padding-left: 70px;
+        padding-left: 40px;
         padding-right: 25px;
     }
 
-    .timeline-container.left::after, .timeline-container.right::after {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left;
     }
 
-    .timeline-container.right {
-        left: 0%;
+    .timeline-icon {
+        top: 20px;
+        left: 15px;
     }
 }
 
