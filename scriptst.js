@@ -41,3 +41,27 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
     const nav = document.querySelector('nav');
     nav.classList.toggle('active');
 });
+
+// JavaScript for background music control
+document.addEventListener('DOMContentLoaded', () => {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const soundOnIcon = document.getElementById('soundOnIcon');
+    const soundOffIcon = document.getElementById('soundOffIcon');
+    const musicControl = document.getElementById('musicControl');
+
+    // Set initial volume to 15%
+    backgroundMusic.volume = 0.15;
+    backgroundMusic.play();
+
+    musicControl.addEventListener('click', () => {
+        if (backgroundMusic.muted) {
+            backgroundMusic.muted = false;
+            soundOnIcon.style.display = 'none';
+            soundOffIcon.style.display = 'block';
+        } else {
+            backgroundMusic.muted = true;
+            soundOnIcon.style.display = 'block';
+            soundOffIcon.style.display = 'none';
+        }
+    });
+});

@@ -15,10 +15,13 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
-    <div class="video-background">
-        <video autoplay loop muted>
-            <source src="background_video.mp4" type="video/mp4">
+    <div class="video-hover-container">
+        <video id="hoverVideo" muted>
+            <source src="Door.mp4" type="video/mp4">
         </video>
+        <div class="hover-text">
+            <p>Enter our Luxury Burgers Kitchen</p>
+        </div>
     </div>
     <div class="content">
         <header>
@@ -109,42 +112,48 @@
                 <h2>Our Journey</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-icon" data-hover="Q3 2024"></div>
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-line"></div>
                         <div class="timeline-content">
                             <h3>Q3 2024: Concept Development</h3>
                             <p>Finalize the concept and design of the initial 15 NFTs. Collaborate with top designers to create visually stunning and luxurious NFTs.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-icon" data-hover="Q4 2024"></div>
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-line"></div>
                         <div class="timeline-content">
                             <h3>Q4 2024: Community Building</h3>
                             <p>Launch social media channels and start engaging with the community through regular updates, sneak peeks, and interactive posts. Initiate a referral program to incentivize community growth.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-icon" data-hover="Q1 2025"></div>
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-line"></div>
                         <div class="timeline-content">
                             <h3>Q1 2025: Pre-Launch and Initial Minting</h3>
                             <p>Release the first 6 additional NFTs for minting. Conduct pre-launch marketing campaigns to build anticipation. Host virtual events and AMAs to connect with the community. Ensure all NFTs are ready for minting on the Polygon network.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-icon" data-hover="Q2 2025"></div>
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-line"></div>
                         <div class="timeline-content">
                             <h3>Q2 2025: Official Launch</h3>
                             <p>Launch the Luxury Burgers NFT collection. Open minting for the remaining 15 NFTs. Collaborate with influencers and media for coverage and promotion.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-icon" data-hover="Q3 2025"></div>
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-line"></div>
                         <div class="timeline-content">
                             <h3>Q3 2025: Post-Launch and Expansion</h3>
                             <p>Continue engaging with the community through regular updates and new releases. Introduce new features and enhancements to the website. Expand the collection with new and exclusive NFTs.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-icon" data-hover="Q4 2025"></div>
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-line"></div>
                         <div class="timeline-content">
                             <h3>Q4 2025 and Beyond: Future Plans</h3>
                             <p>Explore partnerships with luxury brands for exclusive collaborations. Develop a marketplace for Luxury Burgers NFT holders. Continuously innovate and push the boundaries of the NFT space.</p>
@@ -180,5 +189,14 @@
             </div>
         </footer>
     </div>
+
+    <!-- Background music -->
+    <audio id="backgroundMusic" src="Music.mp3" loop></audio>
+    <div id="musicControl" class="music-control">
+        <img id="soundOnIcon" src="sound-off-icon-40963.png" alt="Sound Off">
+        <img id="soundOffIcon" src="sound-png-35795.png" alt="Sound On" style="display: none;">
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
