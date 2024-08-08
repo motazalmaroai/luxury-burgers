@@ -65,3 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// JavaScript for video hover functionality
+document.querySelector('.video-hover-container').addEventListener('mouseover', () => {
+    const video = document.getElementById('hoverVideo');
+    video.play();
+});
+
+document.querySelector('.video-hover-container').addEventListener('mouseout', () => {
+    const video = document.getElementById('hoverVideo');
+    video.pause();
+});
