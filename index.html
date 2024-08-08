@@ -15,15 +15,25 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
-    <div class="video-hover-container">
-        <video id="hoverVideo" muted>
+    <div id="video-container">
+        <video id="door-video" autoplay muted>
             <source src="Door.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <div class="hover-text">
-            <p>Enter our Luxury Burgers Kitchen</p>
-        </div>
+        <div id="hover-text">Enter to Experience Opulence in Every Byte</div>
     </div>
-    <div class="content">
+    <div id="background-container">
+        <video id="background-video" muted loop>
+            <source src="background_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <audio id="background-music" src="Music.mp3" loop></audio>
+    <button id="sound-toggle">
+        <img id="sound-icon" src="sound-png-35795.png" alt="Sound On">
+    </button>
+    <div id="content" style="display:none;">
+        <!-- Your site content here -->
         <header>
             <div class="container">
                 <a href="#home" class="logo"><img src="logo.png" alt="Luxury Burgers Logo"></a>
@@ -38,7 +48,6 @@
                 </nav>
             </div>
         </header>
-
         <section class="hero" id="home">
             <div class="container">
                 <h1>Experience Opulence in Every Byte</h1>
@@ -46,7 +55,6 @@
                 <a href="#collection" class="cta-button">Explore Collection</a>
             </div>
         </section>
-
         <section class="section" id="about">
             <div class="container">
                 <h2>The Concept Behind Luxury Burgers</h2>
@@ -55,11 +63,9 @@
                 <p>Our vision is to transform everyday objects into extraordinary works of digital art, elevating them to new heights of luxury and exclusivity. Through the Luxury Burgers collection, we aim to create a sense of wonder and admiration, offering collectors a unique blend of digital craftsmanship and opulence. Our mission is to continuously innovate and push the boundaries of what’s possible in the NFT space, delivering unparalleled value and experience to our community.</p>
             </div>
         </section>
-
         <section class="section" id="collection">
             <div class="container">
                 <h2>Our Collection</h2>
-
                 <h3>Mint Collection</h3>
                 <div class="grid">
                     <div class="item">
@@ -99,14 +105,12 @@
                         <a href="#" class="cta-link">Mint Coming Soon</a>
                     </div>
                 </div>
-
                 <h3>Main Collection</h3>
                 <div class="main-collection-placeholder">
                     <p>We are still working on our Main Collection. Stay tuned for the exclusive and luxurious reveal coming soon!</p>
                 </div>
             </div>
         </section>
-
         <section class="section" id="roadmap">
             <div class="container">
                 <h2>Our Journey</h2>
@@ -162,7 +166,6 @@
                 </div>
             </div>
         </section>
-
         <section class="cta-section" id="contact">
             <div class="container">
                 <h2>Get in Touch</h2>
@@ -176,7 +179,6 @@
                 </div>
             </div>
         </section>
-
         <footer>
             <div class="container">
                 <p>&copy; 2024 Luxury Burgers. All rights reserved.</p>
